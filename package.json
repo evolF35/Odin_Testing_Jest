@@ -1,0 +1,22 @@
+{
+  "name": "odin_testing_jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testjest.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evolF35/Odin_Testing_Jest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evolF35/Odin_Testing_Jest/issues"
+  },
+  "homepage": "https://github.com/evolF35/Odin_Testing_Jest#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.4"
+  }
+}
