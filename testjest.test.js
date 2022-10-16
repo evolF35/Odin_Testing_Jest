@@ -3,6 +3,7 @@ import { capitalize } from "./testjest";
 import {reverseString} from "./testjest";
 import {calculator} from "./testjest";
 import {caesarCipher} from "./testjest";
+import {analyzeArray} from "./testjest";
 
 test('capitalize: dog', () => {
     expect(capitalize('dog')).toBe('Dog');
@@ -53,3 +54,28 @@ test('caeser: apple 2', () => {
 test('caeser: apple 2', () => {
     expect(caesarCipher('kfrenM$d?',2)).toBe("mhtgpO$f?");
 });
+
+
+test('obj: [1,2,3,4,5]', () => {
+    expect(analyzeArray([1,2,3,4,5]).min).toBe(1);
+});
+
+test('obj: [1,2,3,4,5]', () => {
+    expect(analyzeArray([1,2,3,4,5]).average).toBe(3);
+});
+
+test('obj: [1,2,3,4,5]', () => {
+    expect(analyzeArray([1,2,3,4,5]).max).toBe(5);
+});
+
+
+test('obj: [1,2,3,4,5]', () => {
+    expect(analyzeArray([1,2,3,4,5]).length).toBe(5);
+});
+
+
+test('obj: [1,2,3,4,5]', () => {
+    expect(analyzeArray([1,'d',2,3,4,5])).toBe(null);
+});
+
+

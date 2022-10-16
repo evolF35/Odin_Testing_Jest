@@ -92,5 +92,58 @@ function isUpperCase(char){
 }
 
 
+//inspiration credit check if array contains only numbers
+//https://bobbyhadz.com/blog/javascript-check-if-array-contains-only-numbers#:~:text=To%20check%20if%20an%20array,only%20numbers%20and%20false%20otherwise.
 
+export function analyzeArray(array){
+
+    if(onlyNumbers(array) == false){
+        return(null);
+    }
+
+    let object = {
+        average: getAverage(array),
+        min: getMin(array),
+        max: getMax(array),
+        length: getLength(array)
+    }
+
+    function getAverage(array){
+        let counter = 0;
+        for(let i = 0; i < array.length; i++){
+            counter = counter + array[i];
+        }
+        return(counter / array.length);
+    }
+
+    function getMin(array){
+        let counter = array[0];
+        for(let i = 0; i < array.length; i++){
+            if(array[i] < counter){
+                counter = array[i];
+            }
+        }
+        return(counter);
+    }
+    function getMax(array){
+        let counter = array[0];
+        for(let i = 0; i < array.length; i++){
+            if(array[i] > counter){
+                counter = array[i];
+            }
+        }
+        return(counter);
+    }
+    function getLength(array){
+        return(array.length);
+    }
+
+    function onlyNumbers(array) {
+        return array.every(item => {
+          return typeof item === 'number';
+        });
+      }
+
+    return(object);
+}
 
