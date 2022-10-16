@@ -55,6 +55,41 @@ export const calculator = {
 }
 
 
+// inspiration for caeser code:
+//https://github.com/mooniiDev/testing-practice/blob/main/scripts/caesarCipher.js
+
+export function caesarCipher(string,offset){
+
+    let array = [...string];
+    let res = [];
+
+    for(let char of array){
+        if(isLetter(char)){
+            let def = char.toLowerCase().charCodeAt(0);
+            let shifted = (((def - 97 + offset) % 26) + 97);
+            let newchar = String.fromCharCode(shifted);
+
+            if(isUpperCase(char)){
+                res.push(newchar.toUpperCase());
+            }
+            else{
+                res.push(newchar);
+            }
+        }
+        else{
+            res.push(char);
+        }
+    }
+    return(res.join(''));
+}
+
+function isLetter(char){
+    return (char.match(/[A-Za-z]/));
+}
+
+function isUpperCase(char){
+    return(char == char.toUpperCase());
+}
 
 
 

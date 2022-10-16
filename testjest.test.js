@@ -2,6 +2,7 @@
 import { capitalize } from "./testjest";
 import {reverseString} from "./testjest";
 import {calculator} from "./testjest";
+import {caesarCipher} from "./testjest";
 
 test('capitalize: dog', () => {
     expect(capitalize('dog')).toBe('Dog');
@@ -45,4 +46,10 @@ test('calculator: divide', () => {
 });
 
 
+test('caeser: apple 2', () => {
+    expect(caesarCipher('apple',2)).toBe("crrng");
+});
 
+test('caeser: apple 2', () => {
+    expect(caesarCipher('kfrenM$d?',2)).toBe("mhtgpO$f?");
+});
